@@ -1,7 +1,6 @@
 import neat
 import pygame
 from pong import Game
-from menu import Menu
 
 
 def calculate_fitness(genome1, genome2, game_info):
@@ -29,9 +28,9 @@ class PongGame:
                     break
 
             keys = pygame.key.get_pressed()
-            if keys[pygame.K_w]:
+            if keys[pygame.K_w] or keys[pygame.K_UP]:
                 self.game.move_paddle(left=True, up=True)
-            if keys[pygame.K_s]:
+            if keys[pygame.K_s] or keys[pygame.K_DOWN]:
                 self.game.move_paddle(left=True, up=False)
 
             output = net.activate(

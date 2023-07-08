@@ -1,5 +1,4 @@
 from pong_game import PongGame
-from menu import Menu
 import pygame
 import neat
 import os
@@ -47,6 +46,12 @@ def test_ai(config, file_name):
 if __name__ == '__main__':
     local_dir = os.path.dirname(__file__)
 
+    difficulty_to_config = {
+        'easy': ['config_1', 'difficulty_1.pickle'],
+        'medium': ['config_2', 'difficulty_2.pickle'],
+        'hard': ['config_3', 'difficulty_3.pickle'],
+    }
+
     config_paths = {
         'config_path_1': os.path.join(local_dir, "config_1.txt"),
         'config_path_2': os.path.join(local_dir, "config_2.txt"),
@@ -69,7 +74,16 @@ if __name__ == '__main__':
     # run_neat(config['config_2'], 'difficulty_2.pickle', 25)
     # run_neat(config['config_3'], 'difficulty_3.pickle', 50)
 
-    test_ai(config['config_2'], Menu().draw())
+    print("This is a Pong game implemented using Pygame library and integrated with NEAT "
+          "(NeuroEvolution of Augmenting Topologies) AI algorithm. \nYou can control the paddle by using the arrow "
+          "keys or the 'W' and 'S' keys to move it up and down.")
+
+    difficulty_mode = None
+
+    while difficulty_mode not in difficulty_to_config.keys():
+        difficulty_mode = input('\nWhat difficulty would you like? Easy, medium, or hard?\n').lower().strip()
+
+    test_ai(config[difficulty_to_config[difficulty_mode][0]], difficulty_to_config[difficulty_mode][1])
 
 
 
