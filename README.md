@@ -36,6 +36,5 @@ Enter your choice and press Enter.
 7. Enjoy playing Pong against an AI opponent!
 
 ## Credits
-* The Pong game implementation using Pygame was inspired by the tutorial 
+* This Project was inspired by the tutorial 
 [video](https://www.youtube.com/watch?v=2f6TmKm7yx0) by Tech With Tim.
-* The NEAT integration in the game was made possible by the neat-python library.
