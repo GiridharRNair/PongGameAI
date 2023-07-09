@@ -36,6 +36,7 @@ def run_neat(config, file_name, generations):
 def test_ai(config, file_name):
     width, height = 700, 500
     window = pygame.display.set_mode((width, height))
+    pygame.display.set_caption("Pong Game With AI")
     with open(file_name, 'rb') as f:
         winner = pickle.load(f)
 
@@ -67,10 +68,10 @@ if __name__ == '__main__':
                                 config_paths['config_path_2']),
         'config_3': neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
                                 neat.DefaultSpeciesSet, neat.DefaultStagnation,
-                                config_paths['config_path_2'])
+                                config_paths['config_path_3'])
     }
 
-    # run_neat(config['config_1'], 'difficulty_1.pickle', 1)
+    # run_neat(config['config_1'], 'difficulty_1.pickle', 5)
     # run_neat(config['config_2'], 'difficulty_2.pickle', 25)
     # run_neat(config['config_3'], 'difficulty_3.pickle', 50)
 
