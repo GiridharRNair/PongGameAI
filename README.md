@@ -25,7 +25,7 @@ to control the paddle using either the arrow keys or the 'W' and 'S' keys to mov
     ```
 4. Install all the dependencies, Pygame and NEAT.
     ```bash
-    pip install
+    pip install neat-python pygame
     ```
 5. Run the game using the following command:
     ```bash
