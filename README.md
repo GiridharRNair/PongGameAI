@@ -1,4 +1,8 @@
 # Pong Game with NEAT AI
+
+![PongGameAI](https://github.com/GiridharRNair/PongGameAI/assets/49298134/33de8a8d-e916-4346-a6a3-0da603e741fe)
+
+
 This is a Pong game implemented using the Pygame library and integrated with NEAT 
 (NeuroEvolution of Augmenting Topologies) AI algorithm. NEAT is an evolutionary algorithm that utilizes neural networks 
 to evolve artificial intelligence. In this game, NEAT is used to train the AI opponent to learn and improve its gameplay 
